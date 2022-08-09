@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="StyleSheet\cityguide.css">
+	<title>CityGuide</title>
+</head>
+<body>
+
+
+<div class="Top_Nav_Bar">
+		<img src="stylesheet/logo_A.png" class="Logo_Nav">
+	<h1>CityGuide</h1>
+
+
+<div class="Buttons">
+	 <a href="index.html"><button class="btn">Home</button></a>
+    <a href="cityguide.html"><button class="btn">City Guide</button></a>
+    <a href="azna\about.html"><button class="btn">About Us</button></a>
+    <a href="azna\contact.html"><button class="btn">Contact Us</button></a>
+</div>
+</div>
+
+<div class="Top_Locations">
+
+	<div class="Location">
+	<center><h2>Some Popular Places For Tourists</h2></center>
+	</div>
+
+</div>
+
+
+
+<div class="Top_Locations2">
+<center>
+	<input type="text" name="" id="search" placeholder="Search For Available Cities" onkeyup="Search()">
+	<div id="Unordered_List">
+<ul>
+	<li><a href="Lahore.html"><div id="Location2">
+		<div class="Lahore">
+		</div>
+	    	<h3>Lahore</h3>
+	</div></a></li>
+	<li><a href="Islamabad.html"><div id="Location2">
+		<div class="Islamabad">
+		</div>
+	    	<h3>Islamabad</h3>
+	</div></a></li>
+	<li><a href="karachi.html"><div id="Location2">
+		<div class="karachi">
+		</div>
+	    	<h3>Karachi</h3>
+	  
+	</div></a></li>
+	</ul>
+	</div>
+	</center>
+</div>
+
+<footer>
+	
+<div class="info">
+	<h3>Feel Free to contact us at:</h3> 
+<img src="footer\phone.png" class="ImgSocial1">
+030xxxxxxxx<br>
+	<img src="footer\mail.png" class="ImgSocial1" >
+	b-24808@student.usa.edu.pk<br>
+	<img src="footer\mail.png" class="ImgSocial1">
+	b-24684@student.usa.edu.pk
+
+</div>
+
+
+<div class="links">
+<h2>Keep in touch</h2>
+	<a href="#"><img src="footer\social1.png" class="ImgSocial"></a>
+	<a href="#"><img src="footer\social2.png" class="ImgSocial"></a>
+	<a href="#"><img src="footer\social3.png" class="ImgSocial"></a>
+	<a href="#"><img src="footer\social4.png" class="ImgSocial" ></a>
+	
+</div>
+
+
+<div class="newsletter">
+<center><h1>NewsLetter</h1></center>
+<center><form>
+Email<br><input type="mail" name="email"  placeholder="Enter Your Email"><br><br>
+Password<br><input type="password" name="email"  placeholder="Enter Your Password">
+<br>
+<input type="button" name="Subscribe" value="Subscribe">
+
+
+</form>
+</center>
+
+</div>
+
+
+
+</footer>
+
+
+
+<script>
+function Search() {
+
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("Unordered_List");
+  li = ul.getElementsByTagName('li');
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+
